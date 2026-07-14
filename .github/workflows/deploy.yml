@@ -14,6 +14,8 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - name: Build
+        env:
+          CI: "false"
         run: npm ci && npm run build
       - name: Deploy to Cloudflare Pages
         uses: cloudflare/wrangler-action@v3
