@@ -42,11 +42,7 @@ const apiRequest = async (endpoint, options = {}) => {
             throw new Error(`HTTP error! status: ${response.status}`);
           }
         } else {
-          console.log('토큰 갱신 실패, 로그인 페이지로 리다이렉트...');
-          // 토큰 갱신 실패 시 로그인 페이지로 리다이렉트
-          sessionStorage.removeItem('token');
-          sessionStorage.removeItem('refreshToken');
-          window.location.href = '/accounts/login';
+          // 포트폴리오 데모용 - 리다이렉트 없이 에러만 throw
           throw new Error('Authentication failed');
         }
       } else {

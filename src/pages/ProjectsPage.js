@@ -72,8 +72,7 @@ const ProjectsPage = () => {
   };
 
   const handleCreateProject = () => {
-    // navigate('/projects/new');
-    window.open("https://lib-editor.boinit.com/admin/","_blank");
+    navigate('/projects/new');
   };
 
   const handleProjectClick = (projectId) => {

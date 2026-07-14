@@ -149,12 +149,16 @@ export const AuthProvider = ({ children }) => {
   const isProjectReviewer = (projectId) => hasProjectRole(projectId, PROJECT_ROLES.REVIEWER);
   const isProjectWorker = (projectId) => hasProjectRole(projectId, PROJECT_ROLES.WORKER);
 
-  // 초기화
+  // 초기화 (포트폴리오 데모용 - 항상 임시 유저로 로그인)
   useEffect(() => {
     const initializeAuth = async () => {
-      if (token) {
-        await fetchUserInfo();
-      }
+      setUser({
+        id: 1,
+        username: 'demo',
+        user_type: 'superuser',
+        email: 'demo@local.dev',
+        project_roles: []
+      });
       setLoading(false);
     };
 

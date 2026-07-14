@@ -324,7 +324,8 @@ const Header = ({
         </button>
 
         
-        <button 
+        <button
+          style={{ display: 'none' }}
           className={`header-btn ${isSubmittingServer ? 'submitting' : ''}`}
           onClick={async () => {
             const currentTab = getCurrentTab();

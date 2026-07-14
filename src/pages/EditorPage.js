@@ -274,10 +274,31 @@ function EditorPage() {
     };
   }, [openTabs, activeTabId]); // 의존성 배열에서 contextMenu 제거
 
+  // 데모용: projectId 없을 때 샘플 EPUB 자동 로드
+  useEffect(() => {
+    if (projectId) return;
+    const loadSample = async () => {
+      try {
+        const res = await fetch('/sample.epub');
+        const blob = await res.blob();
+        const file = new File([blob], 'sample.epub', { type: 'application/epub+zip' });
+        const epubInfo = await parseEPUB(file);
+        setEpubData({ file, name: file.name, ...epubInfo });
+        setToc(epubInfo.toc);
+        setFileTree(epubInfo.fileTree);
+        setShowToc(true);
+      } catch (e) {
+        console.error('샘플 EPUB 로드 실패:', e);
+      }
+    };
+    loadSample();
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
+
   // projectId가 있을 때 책 정보를 가져오는 useEffect
   useEffect(() => {
     let isMounted = true;
-    
+
     const fetchBookInfo = async () => {
       if (!projectId) return;
       
