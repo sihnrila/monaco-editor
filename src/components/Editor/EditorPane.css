@@ -1,0 +1,188 @@
+.editor-pane {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  background: #1e1e1e;
+  border-right: 1px solid #333;
+  overflow: visible !important;
+  position: relative !important;
+}
+
+.editor-container {
+  /* flex: 1;
+  display: flex;
+  flex-direction: column;
+  min-height: 0;
+  overflow: visible !important;
+  position: relative !important; */
+  position: relative;
+  height: calc(100vh - 120px); /* 원하는 높이로 */
+}
+
+.editor-container .monaco-editor
+.editor-container .monaco-editor .overflow-guard  {
+  /* flex: 1;
+  overflow: visible !important; */
+  position: absolute;
+  inset: 0;
+}
+
+.editor-container .monaco-editor .suggest-widget,
+.editor-container .monaco-hover {
+  z-index: 9999 !important;
+}
+
+/* Monaco Editor 하이라이트 개선 */
+.editor-container .monaco-editor .token.tag {
+  color: #569cd6 !important;
+}
+
+.editor-container .monaco-editor .token.tag.tag-name {
+  color: #569cd6 !important;
+}
+
+.editor-container .monaco-editor .token.tag.attribute {
+  color: #9cdcfe !important;
+}
+
+.editor-container .monaco-editor .token.tag.attribute.value {
+  color: #ce9178 !important;
+}
+
+.editor-container .monaco-editor .token.property {
+  color: #9cdcfe !important;
+}
+
+.editor-container .monaco-editor .token.property.value {
+  color: #ce9178 !important;
+}
+
+.editor-container .monaco-editor .token.keyword {
+  color: #c586c0 !important;
+}
+
+.editor-container .monaco-editor .token.string {
+  color: #ce9178 !important;
+}
+
+.editor-container .monaco-editor .token.comment {
+  color: #6a9955 !important;
+}
+
+/* 편집기 포커스 개선 */
+.editor-container .monaco-editor:focus-within {
+  outline: 2px solid #007acc;
+  outline-offset: -2px;
+}
+
+/* 스크롤바 스타일 개선 */
+.editor-container .monaco-editor .scrollbar .slider {
+  background: #424242 !important;
+}
+
+.editor-container .monaco-editor .scrollbar .slider:hover {
+  background: #4f4f4f !important;
+}
+
+.editor-container .monaco-editor .scrollbar .slider.active {
+  background: #007acc !important;
+}
+
+/* 자동완성 위젯 스타일 개선 */
+.editor-container .monaco-editor .suggest-widget {
+  background: #252526 !important;
+  border: 1px solid #454545 !important;
+  border-radius: 4px !important;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3) !important;
+  z-index: 99999 !important;
+  max-height: 300px !important;
+  overflow: visible !important;
+  position: fixed !important;
+  top: auto !important;
+  left: auto !important;
+  right: auto !important;
+  bottom: auto !important;
+}
+
+/* Monaco Editor 전체 컨테이너 */
+.editor-container .monaco-editor {
+  overflow: visible !important;
+  position: relative !important;
+}
+
+/* Monaco Editor 내부 컨테이너들 */
+.editor-container .monaco-editor .monaco-editor-background,
+.editor-container .monaco-editor .margin,
+.editor-container .monaco-editor .monaco-scrollable-element {
+  overflow: visible !important;
+}
+
+.editor-container .monaco-editor .suggest-widget .monaco-list {
+  max-height: 300px !important;
+  overflow-y: auto !important;
+}
+
+.editor-container .monaco-editor .suggest-widget .monaco-list .monaco-list-row {
+  color: #d4d4d4 !important;
+  padding: 4px 8px !important;
+  height: auto !important;
+  min-height: 20px !important;
+}
+
+.editor-container .monaco-editor .suggest-widget .monaco-list .monaco-list-row:hover {
+  background: #094771 !important;
+}
+
+.editor-container .monaco-editor .suggest-widget .monaco-list .monaco-list-row.selected {
+  background: #094771 !important;
+  color: #ffffff !important;
+}
+
+.editor-container .monaco-editor .suggest-widget .monaco-list .monaco-list-row .monaco-icon-label {
+  color: #d4d4d4 !important;
+}
+
+.editor-container .monaco-editor .suggest-widget .monaco-list .monaco-list-row .monaco-icon-label .monaco-icon-label-description-container {
+  color: #858585 !important;
+}
+
+/* CSS 특화 자동완성 스타일 */
+.editor-container .monaco-editor .suggest-widget .monaco-list .monaco-list-row[data-kind="property"] {
+  color: #9cdcfe !important;
+}
+
+.editor-container .monaco-editor .suggest-widget .monaco-list .monaco-list-row[data-kind="value"] {
+  color: #ce9178 !important;
+}
+
+.editor-container .monaco-editor .suggest-widget .monaco-list .monaco-list-row[data-kind="keyword"] {
+  color: #c586c0 !important;
+}
+
+/* 호버 툴팁 스타일 */
+.editor-container .monaco-editor .hover {
+  background: #252526 !important;
+  border: 1px solid #454545 !important;
+  border-radius: 4px !important;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3) !important;
+  z-index: 1001 !important;
+}
+
+.editor-container .monaco-editor .hover .hover-contents {
+  color: #d4d4d4 !important;
+  padding: 8px !important;
+}
+
+/* 파라미터 힌트 스타일 */
+.editor-container .monaco-editor .parameter-hints-widget {
+  background: #252526 !important;
+  border: 1px solid #454545 !important;
+  border-radius: 4px !important;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3) !important;
+  z-index: 1002 !important;
+}
+
+.editor-container .monaco-editor .parameter-hints-widget .wrapper {
+  color: #d4d4d4 !important;
+  padding: 8px !important;
+}

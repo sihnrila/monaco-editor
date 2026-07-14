@@ -1,0 +1,463 @@
+/* VS Code Sidebar Styles - 개선된 위치 */
+.vscode-sidebar {
+  position: fixed;
+  top: 138px;
+  left: 0;
+  width: 250px;
+  height: calc(100vh - 80px);
+  background: var(--surface-primary);
+  border-right: 1px solid var(--border);
+  display: flex;
+  z-index: 9999;
+  transform: translateX(0);
+  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.vscode-sidebar.hidden {
+  transform: translateX(-100%);
+  pointer-events: none;
+  visibility: hidden;
+}
+
+.vscode-sidebar-tabs {
+  width: 48px;
+  background: var(--surface-secondary);
+  border-right: 1px solid var(--border);
+  display: flex;
+  flex-direction: column;
+  padding: 8px 0;
+}
+
+.vscode-tab {
+  width: 48px;
+  height: 48px;
+  background: none;
+  border: none;
+  color: var(--text-secondary);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+  margin-bottom: 2px;
+  transition: all 0.2s ease;
+}
+
+.vscode-tab:hover {
+  background: var(--surface-hover);
+  color: var(--text-primary);
+}
+
+.vscode-tab.active {
+  background: var(--primary-color);
+  color: #ffffff;
+}
+
+.vscode-sidebar-content {
+  flex: 1;
+  background: var(--surface-primary);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Explorer Panel */
+.explorer-panel {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.panel-header {
+  padding: 12px 16px;
+  background: var(--surface-secondary);
+  border-bottom: 1px solid var(--border);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  min-height: 48px;
+  flex-shrink: 0;
+}
+
+.panel-header h3 {
+  margin: 0;
+  color: var(--text-primary);
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.panel-actions {
+  display: flex;
+  gap: 4px;
+}
+
+.panel-action-btn {
+  background: none;
+  border: none;
+  color: var(--text-primary);
+  cursor: pointer;
+  padding: 4px;
+  border-radius: 3px;
+  font-size: 12px;
+  transition: background 0.2s ease;
+}
+
+.panel-action-btn:hover {
+  background: var(--surface-hover);
+}
+
+.explorer-content {
+  flex: 1;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.file-explorer {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.explorer-section {
+  flex: 1;
+  border-bottom: 1px solid #3e3e42;
+  display: flex;
+  flex-direction: column;
+}
+
+.section-header {
+  padding: 8px 16px;
+  background: var(--surface-secondary);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 12px;
+  color: var(--text-primary);
+  font-weight: 500;
+}
+
+.section-content {
+  flex: 1;
+  overflow: auto;
+}
+
+.empty-state {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 200px;
+  color: var(--text-secondary);
+  text-align: center;
+  padding: 20px;
+}
+
+.empty-icon {
+  font-size: 48px;
+  margin-bottom: 16px;
+}
+
+.empty-text {
+  margin-bottom: 16px;
+  font-size: 14px;
+}
+
+.upload-btn {
+  background: var(--primary-color);
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 12px;
+  transition: background 0.2s ease;
+}
+
+.upload-btn:hover {
+  background: var(--primary-hover);
+}
+
+.file-tree-empty {
+  color: var(--text-secondary);
+  font-style: italic;
+  text-align: center;
+  padding: 20px;
+}
+
+.file-tree-scroll {
+  /* Scrollbar styling will be inherited from main app styles */
+}
+
+/* Search Panel */
+.search-panel {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.search-content {
+  flex: 1;
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.search-input-container {
+  display: flex;
+  gap: 8px;
+}
+
+.search-input {
+  flex: 1;
+  background: var(--surface-secondary);
+  border: 1px solid var(--border);
+  color: var(--text-primary);
+  padding: 8px 12px;
+  border-radius: 4px;
+  font-size: 13px;
+}
+
+.search-input:focus {
+  outline: none;
+  border-color: var(--primary-color);
+}
+
+.search-btn {
+  background: var(--primary-color);
+  color: white;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 13px;
+  transition: background 0.2s ease;
+}
+
+.search-btn:hover {
+  background: var(--primary-hover);
+}
+
+.search-options {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.search-option {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--text-primary);
+  font-size: 12px;
+  cursor: pointer;
+}
+
+.search-option input[type="checkbox"] {
+  margin: 0;
+}
+
+.search-results {
+  flex: 1;
+  overflow: auto;
+}
+
+.search-results-list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.search-result-file {
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.result-file-header {
+  background: var(--surface-secondary);
+  padding: 8px 12px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 12px;
+  color: var(--text-primary);
+  font-weight: 500;
+}
+
+.result-file-count {
+  color: var(--text-secondary);
+}
+
+.search-result-item {
+  padding: 4px 12px;
+  border-top: 1px solid var(--border);
+  cursor: pointer;
+  display: flex;
+  gap: 8px;
+  font-size: 11px;
+  color: var(--text-primary);
+  transition: background 0.2s ease;
+}
+
+.search-result-item:hover {
+  background: var(--surface-hover);
+}
+
+.result-line-number {
+  color: var(--text-secondary);
+  min-width: 30px;
+}
+
+.result-line-text {
+  flex: 1;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.no-results, .search-placeholder {
+  color: var(--text-secondary);
+  text-align: center;
+  padding: 20px;
+  font-size: 12px;
+}
+
+/* Run Panel */
+.run-panel {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.run-content {
+  flex: 1;
+  padding: 16px;
+}
+
+.run-configurations {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.configuration-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px;
+  background: var(--primary-color);
+  border: 1px solid var(--primary-color);
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  color: white;
+  font-size: 13px;
+}
+
+.configuration-item:hover:not([disabled]) {
+  background: var(--primary-hover);
+  border-color: var(--primary-hover);
+}
+
+.configuration-item[disabled] {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.config-icon {
+  font-size: 14px;
+  min-width: 16px;
+}
+
+.config-name {
+  flex: 1;
+}
+
+/* Extensions Panel */
+.extensions-panel {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.extensions-content {
+  flex: 1;
+  padding: 16px;
+}
+
+.extension-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px;
+  background: var(--primary-color);
+  border: 1px solid var(--primary-color);
+  border-radius: 4px;
+  cursor: pointer;
+  margin-bottom: 8px;
+  transition: all 0.2s ease;
+  color: white;
+  font-size: 13px;
+}
+
+.extension-item:hover {
+  background: var(--primary-hover);
+  border-color: var(--primary-hover);
+}
+
+.extension-icon {
+  font-size: 14px;
+  min-width: 16px;
+}
+
+.extension-name {
+  flex: 1;
+}
+
+/* Theme Selector Styles */
+.theme-selector {
+  position: relative;
+}
+
+.theme-dropdown {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  background: var(--surface-secondary);
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  margin-top: 4px;
+  z-index: 1000;
+  display: none;
+  box-shadow: var(--shadow-lg);
+}
+
+.theme-selector:hover .theme-dropdown {
+  display: block;
+}
+
+.theme-option {
+  padding: 8px 12px;
+  cursor: pointer;
+  font-size: 12px;
+  color: var(--text-primary);
+  transition: background 0.2s ease;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.theme-option:hover {
+  background: var(--surface-hover);
+}
+
+.theme-option:first-child {
+  border-radius: 4px 4px 0 0;
+}
+
+.theme-option:last-child {
+  border-radius: 0 0 4px 4px;
+}

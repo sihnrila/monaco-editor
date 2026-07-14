@@ -1,0 +1,204 @@
+/* Menu Sidebar Styles */
+.menu-sidebar {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 300px;
+  height: 100vh;
+  background: var(--surface-primary);
+  border-left: 1px solid var(--border);
+  display: flex;
+  flex-direction: column;
+  z-index: 200;
+  transition: width 0.3s ease;
+}
+
+.menu-sidebar.collapsed {
+  width: 60px;
+}
+
+.menu-sidebar-header {
+  padding: 12px 16px;
+  background: var(--surface-secondary);
+  border-bottom: 1px solid var(--border);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  min-height: 48px;
+  flex-shrink: 0;
+}
+
+.menu-title {
+  margin: 0;
+  color: var(--text-primary);
+  font-size: 14px;
+  font-weight: 500;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.menu-sidebar.collapsed .menu-title {
+  display: none;
+}
+
+.menu-toggle-btn,
+.menu-close-btn {
+  background: none;
+  border: none;
+  color: var(--text-primary);
+  cursor: pointer;
+  padding: 4px;
+  border-radius: 3px;
+  font-size: 12px;
+  transition: background 0.2s ease;
+  min-width: 24px;
+  height: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.menu-toggle-btn:hover,
+.menu-close-btn:hover {
+  background: var(--surface-hover);
+}
+
+.menu-content {
+  flex: 1;
+  overflow-y: auto;
+  padding: 16px;
+}
+
+.menu-section {
+  margin-bottom: 24px;
+}
+
+.menu-section-title {
+  color: var(--text-secondary);
+  font-size: 11px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin: 0 0 12px 0;
+  padding: 0 8px;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.menu-sidebar.collapsed .menu-section-title {
+  display: none;
+}
+
+.menu-btn {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 10px 8px;
+  background: var(--primary-color);
+  border: none;
+  color: white;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: all 0.2s ease;
+  font-size: 13px;
+  margin-bottom: 4px;
+  text-align: left;
+  min-height: 36px;
+}
+
+.menu-btn:hover:not(:disabled) {
+  background: var(--primary-hover);
+}
+
+.menu-btn.active {
+  background: var(--primary-hover);
+  color: white;
+}
+
+.menu-btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.menu-icon {
+  font-size: 14px;
+  min-width: 16px;
+  text-align: center;
+  flex-shrink: 0;
+}
+
+.menu-text {
+  flex: 1;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.menu-sidebar.collapsed .menu-text {
+  display: none;
+}
+
+.menu-sidebar.collapsed .menu-btn {
+  justify-content: center;
+  padding: 10px 4px;
+}
+
+/* Theme Selector Styles */
+.theme-selector {
+  position: relative;
+}
+
+.theme-dropdown {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  background: var(--surface-secondary);
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  margin-top: 4px;
+  z-index: 1000;
+  display: none;
+  box-shadow: var(--shadow-lg);
+}
+
+.theme-selector:hover .theme-dropdown {
+  display: block;
+}
+
+.theme-option {
+  padding: 8px 12px;
+  cursor: pointer;
+  font-size: 12px;
+  color: var(--text-primary);
+  transition: background 0.2s ease;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.theme-option:hover {
+  background: var(--surface-hover);
+}
+
+.theme-option:first-child {
+  border-radius: 4px 4px 0 0;
+}
+
+.theme-option:last-child {
+  border-radius: 0 0 4px 4px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .menu-sidebar {
+    width: 100%;
+    right: -100%;
+    transition: right 0.3s ease;
+  }
+  
+  .menu-sidebar.collapsed {
+    width: 100%;
+  }
+}

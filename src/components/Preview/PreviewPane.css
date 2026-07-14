@@ -1,0 +1,58 @@
+.preview-pane {
+  background: #1e1e1e;
+  border-left: 1px solid #333;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  overflow: auto;
+}
+
+.preview-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 16px;
+  background: #2d2d30;
+  border-bottom: 1px solid #3e3e42;
+  min-height: 48px;
+  flex-shrink: 0;
+}
+
+.preview-header h3 {
+  margin: 0;
+  color: #cccccc;
+  font-size: 14px;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.preview-header h3 span {
+  font-size: 16px;
+}
+
+.preview-iframe {
+  flex: 1;
+  border: none;
+  background: white;
+  overflow: auto;
+}
+
+/* 디바이스 선택 컨트롤 스타일 */
+.preview-header select,
+.preview-header input {
+  background: #3c3c3c;
+  color: #cccccc;
+  border: 1px solid #5a5a5a;
+}
+
+.preview-header select:focus,
+.preview-header input:focus {
+  outline: none;
+  border-color: #007acc;
+}
+
+.preview-header input[type="number"] {
+  text-align: center;
+}

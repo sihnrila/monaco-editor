@@ -1,0 +1,70 @@
+.format-toolbar {
+  display: flex;
+  align-items: center;
+  background: #2d2d30;
+  border-bottom: 1px solid #3e3e42;
+  padding: 6px 8px;
+  min-height: 36px;
+  gap: 4px;
+}
+
+.toolbar-group {
+  display: flex;
+  align-items: center;
+  gap: 2px;
+}
+
+.toolbar-separator {
+  width: 1px;
+  height: 20px;
+  background: #3e3e42;
+  margin: 0 8px;
+}
+
+.toolbar-btn {
+  background: #3c3c3c;
+  border: 1px solid #5a5a5a;
+  color: #f0f0f0;
+  padding: 4px 8px;
+  border-radius: 3px;
+  cursor: pointer;
+  font-size: 12px;
+  font-weight: bold;
+  min-width: 24px;
+  height: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s ease;
+}
+
+.toolbar-btn:hover {
+  background: #4a4a4a;
+  border-color: #6a6a6a;
+}
+
+.toolbar-btn:active {
+  background: #2a2a2a;
+  transform: translateY(1px);
+}
+
+.toolbar-btn strong,
+.toolbar-btn em,
+.toolbar-btn u,
+.toolbar-btn s {
+  color: inherit;
+  font-style: inherit;
+  text-decoration: inherit;
+}
+
+.toolbar-btn em {
+  font-style: italic;
+}
+
+.toolbar-btn u {
+  text-decoration: underline;
+}
+
+.toolbar-btn s {
+  text-decoration: line-through;
+}

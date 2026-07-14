@@ -1,0 +1,15 @@
+.project-settings-page {
+  padding: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.project-settings-page h1 {
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.project-settings-page p {
+  color: #666;
+  line-height: 1.6;
+} 

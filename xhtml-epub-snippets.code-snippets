@@ -1,0 +1,142 @@
+{
+  "EPUB XHTML Template": {
+    "prefix": "epub-xhtml",
+    "body": [
+      "<?xml version=\"1.0\" encoding=\"UTF-8\"?>",
+      "<!DOCTYPE html>",
+      "<html lang=\"ko\" xml:lang=\"ko\" xmlns=\"http://www.w3.org/1999/xhtml\" xmlns:epub=\"http://www.idpf.org/2007/ops\">",
+      "  <head>",
+      "    <meta charset=\"utf-8\"/>",
+      "    <title>${1:제목}</title>",
+      "    <link href=\"../Styles/style_default_001.css\" rel=\"stylesheet\" type=\"text/css\"/>",
+      "  </head>",
+      "  <body>",
+      "    <section epub:type=\"chapter\" role=\"doc-chapter\">",
+      "      <h1>${2:챕터 제목}</h1>",
+      "      <p>",
+      "        ${3}",
+      "      </p>",
+      "    </section>",
+      "  </body>",
+      "</html>"
+    ],
+    "description": "EPUB XHTML 기본 문서 구조",
+    "scope": "xhtml"
+  },
+  "EPUB Section": {
+    "prefix": "epub-section",
+    "body": [
+      "<section epub:type=\"${1:chapter}\" role=\"doc-${2:chapter}\">",
+      "  ${3}",
+      "</section>"
+    ],
+    "description": "EPUB 섹션 요소",
+    "scope": "xhtml"
+  },
+  "EPUB Chapter": {
+    "prefix": "epub-chapter",
+    "body": [
+      "<section epub:type=\"chapter\" role=\"doc-chapter\">",
+      "  <h1>${1:챕터 제목}</h1>",
+      "  ${2}",
+      "</section>"
+    ],
+    "description": "EPUB 챕터 섹션",
+    "scope": "xhtml"
+  },
+  "XHTML Basic Template": {
+    "prefix": "xhtml-basic",
+    "body": [
+      "<?xml version=\"1.0\" encoding=\"UTF-8\"?>",
+      "<!DOCTYPE html PUBLIC \"-//W3C//DTD XHTML 1.1//EN\" \"http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd\">",
+      "<html xmlns=\"http://www.w3.org/1999/xhtml\" xml:lang=\"ko\">",
+      "  <head>",
+      "    <meta http-equiv=\"Content-Type\" content=\"text/html; charset=UTF-8\" />",
+      "    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\" />",
+      "    <title>${1:Document}</title>",
+      "    <link rel=\"stylesheet\" href=\"${2:../Styles/style.css}\" />",
+      "  </head>",
+      "  <body>",
+      "    ${3}",
+      "  </body>",
+      "</html>"
+    ],
+    "description": "XHTML 1.1 기본 문서 구조",
+    "scope": "xhtml"
+  },
+  "EPUB Paragraph": {
+    "prefix": "epub-p",
+    "body": [
+      "<p>",
+      "  ${1}",
+      "</p>"
+    ],
+    "description": "EPUB 단락",
+    "scope": "xhtml"
+  },
+  "EPUB Heading 1": {
+    "prefix": "epub-h1",
+    "body": [
+      "<h1>${1}</h1>"
+    ],
+    "description": "EPUB 제목 1",
+    "scope": "xhtml"
+  },
+  "EPUB Heading 2": {
+    "prefix": "epub-h2",
+    "body": [
+      "<h2>${1}</h2>"
+    ],
+    "description": "EPUB 제목 2",
+    "scope": "xhtml"
+  },
+  "EPUB Heading 3": {
+    "prefix": "epub-h3",
+    "body": [
+      "<h3>${1}</h3>"
+    ],
+    "description": "EPUB 제목 3",
+    "scope": "xhtml"
+  },
+  "EPUB Image": {
+    "prefix": "epub-img",
+    "body": [
+      "<img src=\"${1:../Images/image.jpg}\" alt=\"${2:이미지 설명}\" />"
+    ],
+    "description": "EPUB 이미지",
+    "scope": "xhtml"
+  },
+  "EPUB Link": {
+    "prefix": "epub-link",
+    "body": [
+      "<link href=\"${1:../Styles/style.css}\" rel=\"stylesheet\" type=\"text/css\"/>"
+    ],
+    "description": "EPUB CSS 링크",
+    "scope": "xhtml"
+  },
+  "EPUB Meta": {
+    "prefix": "epub-meta",
+    "body": [
+      "<meta name=\"${1}\" content=\"${2}\" />"
+    ],
+    "description": "EPUB 메타 태그",
+    "scope": "xhtml"
+  },
+  "EPUB Break": {
+    "prefix": "epub-br",
+    "body": [
+      "<br />"
+    ],
+    "description": "EPUB 줄바꿈",
+    "scope": "xhtml"
+  },
+  "EPUB Horizontal Rule": {
+    "prefix": "epub-hr",
+    "body": [
+      "<hr />"
+    ],
+    "description": "EPUB 수평선",
+    "scope": "xhtml"
+  }
+}
+
